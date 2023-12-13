@@ -7,6 +7,7 @@ import Oscar from "./components/Oscar";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
+import LoggedIn from "./components/LoggedIn";
 
 const App = () => {
   const personName = {
@@ -64,6 +65,8 @@ const App = () => {
       />
       {/* Style Props */}
       <Container styles={{ border: "1px solid #000", padding: "1rem" }} />
+      {/* useState Hook */}
+      <LoggedIn />
     </div>
   );
 };
