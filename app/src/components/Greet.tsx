@@ -4,7 +4,8 @@ import React from "react";
 //* But usually we use "type"-s for building applications, "interface"-s for building libraries.
 type GreetProps = {
   name: string;
-  messageCount: number;
+  //* We can set this property optional.
+  messageCount?: number;
   isLoggedIn: boolean;
 };
 

@@ -20,7 +20,7 @@ type PersonListProps = {
 //* We can set type also like this.
 const PersonList: React.FC<PersonListProps> = (props) => {
   return (
-    <div className="d-flex flex-column align-items-center">
+    <div>
       {props.fullNames.map((item, index) => {
         return (
           <p>
