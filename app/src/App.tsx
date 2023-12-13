@@ -1,4 +1,3 @@
-import { Stats } from "fs";
 import Greet from "./components/Greet";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
@@ -7,6 +6,7 @@ import Heading from "./components/Heading";
 import Oscar from "./components/Oscar";
 import Button from "./components/Button";
 import Input from "./components/Input";
+import Container from "./components/Container";
 
 const App = () => {
   const personName = {
@@ -62,6 +62,8 @@ const App = () => {
           console.log(e);
         }}
       />
+      {/* Style Props */}
+      <Container styles={{ border: "1px solid #000", padding: "1rem" }} />
     </div>
   );
 };
