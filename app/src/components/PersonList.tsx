@@ -23,7 +23,7 @@ const PersonList: React.FC<PersonListProps> = (props) => {
     <div>
       {props.fullNames.map((item, index) => {
         return (
-          <p>
+          <p key={index}>
             {item.name} {item.surname}
           </p>
         );

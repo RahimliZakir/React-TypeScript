@@ -5,6 +5,8 @@ import PersonList from "./components/PersonList";
 import Status from "./components/Status";
 import Heading from "./components/Heading";
 import Oscar from "./components/Oscar";
+import Button from "./components/Button";
+import Input from "./components/Input";
 
 const App = () => {
   const personName = {
@@ -27,6 +29,14 @@ const App = () => {
     },
   ];
 
+  const handleButtonClick = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    id: number
+  ) => {
+    console.log(e, "event");
+    console.log(id, "id");
+  };
+
   return (
     <div className="App d-flex flex-column align-items-center">
       {/* Props with Primitive Types */}
@@ -43,6 +53,15 @@ const App = () => {
       <Oscar>
         <Heading>And Oscar goes to Leonardo DiCaprio!</Heading>
       </Oscar>
+      {/* Event Props (MouseEvent - HTMLButtonELement) */}
+      <Button handleButtonClick={handleButtonClick} />
+      {/* Event Props (ChangeEvent - HTMLInputELement) */}
+      <Input
+        value=""
+        handleInputChange={(e) => {
+          console.log(e);
+        }}
+      />
     </div>
   );
 };
