@@ -1,11 +1,5 @@
 import React from "react";
-
-type PersonListProps = {
-  fullNames: {
-    name: string;
-    surname: string;
-  }[];
-};
+import { PersonListProps } from "../types/PersonList.types";
 
 //* We can write also like this.
 // type PersonListOtherWayObject = {

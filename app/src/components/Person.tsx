@@ -1,10 +1,12 @@
 import React from "react";
 
+type PersonName = {
+  firstName: string;
+  lastName: string;
+};
+
 type PersonProps = {
-  fullName: {
-    firstName: string;
-    lastName: string;
-  };
+  fullName: PersonName;
 };
 
 const Person = (props: PersonProps) => {
