@@ -68,7 +68,7 @@ const App = () => {
       <Container styles={{ border: "1px solid #000", padding: "1rem" }} />
       {/* useState Hook */}
       <LoggedIn />
-      {/* useState Future Value */}
+      {/* useState Future Value & useState Type Assertion */}
       <User />
     </div>
   );
