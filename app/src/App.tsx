@@ -14,6 +14,7 @@ import ThemeProvider from "./components/context/ThemeProvider";
 import Box from "./components/context/Box";
 import MemberContextProvider from "./components/context/MemberContextProvider";
 import Member from "./components/context/Member";
+import DomRef from "./components/DomRef";
 
 const App = () => {
   const personName = {
@@ -85,6 +86,8 @@ const App = () => {
       <MemberContextProvider>
         <Member />
       </MemberContextProvider>
+      {/* useRef Hook */}
+      <DomRef />
     </div>
   );
 };
