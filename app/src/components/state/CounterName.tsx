@@ -41,7 +41,7 @@ const reducer = (state: CounterNameState, action: CounterNameAction) => {
   }
 };
 
-const Counter = () => {
+const Counter: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (

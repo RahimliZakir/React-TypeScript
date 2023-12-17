@@ -10,6 +10,8 @@ import Container from "./components/Container";
 import LoggedIn from "./components/state/LoggedIn";
 import User from "./components/state/User";
 import CounterName from "./components/state/CounterName";
+import ThemeProvider from "./components/context/ThemeProvider";
+import Box from "./components/context/Box";
 
 const App = () => {
   const personName = {
@@ -73,6 +75,10 @@ const App = () => {
       <User />
       {/* useReducer Hook & useReducer Strict Action Types */}
       <CounterName />
+      {/* useContext Hook */}
+      <ThemeProvider>
+        <Box />
+      </ThemeProvider>
     </div>
   );
 };
