@@ -1,34 +1,41 @@
 import React, { useReducer } from "react";
 
-enum CounterActionTypes {
+enum CounterNameActionTypes {
   INCREASE = "INCREASE",
   DECREASE = "DECREASE",
   CHANGE_NAME = "CHANGE_NAME",
 }
 
-type CounterState = {
+type CounterNameState = {
   name: string;
   age: number;
 };
 
 type CounterAction = {
-  type: string;
-  payload?: number | string;
+  type: CounterNameActionTypes.INCREASE | CounterNameActionTypes.DECREASE;
 };
+
+type NameAction = {
+  type: CounterNameActionTypes.CHANGE_NAME;
+  payload: string;
+};
+
+//* useReducer Strict Action Types
+type CounterNameAction = CounterAction | NameAction;
 
 const initialState = {
   name: "",
   age: 0,
 };
 
-const reducer = (state: CounterState, action: CounterAction) => {
+const reducer = (state: CounterNameState, action: CounterNameAction) => {
   switch (action.type) {
-    case CounterActionTypes.INCREASE:
+    case CounterNameActionTypes.INCREASE:
       return { ...state, age: state.age + 1 };
-    case CounterActionTypes.DECREASE:
+    case CounterNameActionTypes.DECREASE:
       return { ...state, age: state.age - 1 };
-    case CounterActionTypes.CHANGE_NAME:
-      return { ...state, name: action?.payload as string };
+    case CounterNameActionTypes.CHANGE_NAME:
+      return { ...state, name: action.payload };
     default:
       return state;
   }
@@ -45,7 +52,7 @@ const Counter = () => {
             value={state.name}
             onChange={(e) =>
               dispatch({
-                type: CounterActionTypes.CHANGE_NAME,
+                type: CounterNameActionTypes.CHANGE_NAME,
                 payload: e.target.value,
               })
             }
@@ -55,14 +62,14 @@ const Counter = () => {
         </div>
         <div className="mb-2">
           <button
-            onClick={() => dispatch({ type: CounterActionTypes.INCREASE })}
+            onClick={() => dispatch({ type: CounterNameActionTypes.INCREASE })}
             className="btn btn-success"
             type="button"
           >
             Increase
           </button>
           <button
-            onClick={() => dispatch({ type: CounterActionTypes.DECREASE })}
+            onClick={() => dispatch({ type: CounterNameActionTypes.DECREASE })}
             className="btn btn-info"
             type="button"
           >
