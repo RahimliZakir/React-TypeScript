@@ -12,6 +12,8 @@ import User from "./components/state/User";
 import CounterName from "./components/state/CounterName";
 import ThemeProvider from "./components/context/ThemeProvider";
 import Box from "./components/context/Box";
+import MemberContextProvider from "./components/context/MemberContextProvider";
+import Member from "./components/context/Member";
 
 const App = () => {
   const personName = {
@@ -79,6 +81,10 @@ const App = () => {
       <ThemeProvider>
         <Box />
       </ThemeProvider>
+      {/* useContext Future Value */}
+      <MemberContextProvider>
+        <Member />
+      </MemberContextProvider>
     </div>
   );
 };
