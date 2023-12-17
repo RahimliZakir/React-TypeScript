@@ -9,6 +9,7 @@ import Input from "./components/Input";
 import Container from "./components/Container";
 import LoggedIn from "./components/state/LoggedIn";
 import User from "./components/state/User";
+import Counter from "./components/state/Counter";
 
 const App = () => {
   const personName = {
@@ -70,6 +71,8 @@ const App = () => {
       <LoggedIn />
       {/* useState Future Value & useState Type Assertion */}
       <User />
+      {/* useReducer Hook */}
+      <Counter />
     </div>
   );
 };
