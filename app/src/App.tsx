@@ -16,6 +16,8 @@ import MemberContextProvider from "./components/context/MemberContextProvider";
 import Member from "./components/context/Member";
 import DomRef from "./components/DomRef";
 import CounterClass from "./components/class/CounterClass";
+import Private from "./components/auth/Private";
+import Profile from "./components/auth/Profile";
 
 const App = () => {
   const personName = {
@@ -91,6 +93,8 @@ const App = () => {
       <DomRef />
       {/* Class Component */}
       <CounterClass message={"This is class component with tsx."} />
+      {/* Component Prop */}
+      <Private isLoggedIn={true} Component={Profile} />
     </div>
   );
 };
