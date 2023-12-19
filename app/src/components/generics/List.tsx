@@ -5,6 +5,7 @@ type ListProps<T> = {
   onClick: (value: T) => void;
 };
 
+//* "{}" o demekdir ki "T" nosh obyektden torenir ve az mehdudiyyet qoyuruq.
 const List = <T extends string | number /*{}*/>({
   items,
   onClick,

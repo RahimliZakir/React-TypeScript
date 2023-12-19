@@ -19,6 +19,7 @@ import CounterClass from "./components/class/CounterClass";
 import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
 import List from "./components/generics/List";
+import RandomNumber from "./components/restriction/RandomNumber";
 
 const App = () => {
   const personName = {
@@ -102,6 +103,9 @@ const App = () => {
         onClick={(item) => console.log(item)}
       />
       <List items={[13, 23, 93]} onClick={(item) => console.log(item)} />
+      {/* Restricting Props */}
+      {/* Hansini gonderiremse o "true" kimi basha dushulecek. */}
+      <RandomNumber value={13} isPositive />
     </div>
   );
 };
