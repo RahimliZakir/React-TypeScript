@@ -18,6 +18,7 @@ import DomRef from "./components/DomRef";
 import CounterClass from "./components/class/CounterClass";
 import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
+import List from "./components/generics/List";
 
 const App = () => {
   const personName = {
@@ -95,6 +96,12 @@ const App = () => {
       <CounterClass message={"This is class component with tsx."} />
       {/* Component Prop */}
       <Private isLoggedIn={true} Component={Profile} />
+      {/* Generic Props */}
+      <List
+        items={["Zakir", "Ibrahim", "Eli"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[13, 23, 93]} onClick={(item) => console.log(item)} />
     </div>
   );
 };
