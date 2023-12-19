@@ -15,6 +15,7 @@ import Box from "./components/context/Box";
 import MemberContextProvider from "./components/context/MemberContextProvider";
 import Member from "./components/context/Member";
 import DomRef from "./components/DomRef";
+import CounterClass from "./components/class/CounterClass";
 
 const App = () => {
   const personName = {
@@ -88,6 +89,8 @@ const App = () => {
       </MemberContextProvider>
       {/* useRef Hook */}
       <DomRef />
+      {/* Class Component */}
+      <CounterClass message={"This is class component with tsx."} />
     </div>
   );
 };
