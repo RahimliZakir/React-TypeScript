@@ -21,6 +21,7 @@ import Profile from "./components/auth/Profile";
 import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateLiterals/Toast";
+import HtmlButton from "./components/html/HtmlButton";
 
 const App = () => {
   const personName = {
@@ -109,6 +110,13 @@ const App = () => {
       <RandomNumber value={13} isPositive />
       {/* Template Literals and Exclude */}
       <Toast position="center-bottom" />
+      {/* Wrapping HTML Element */}
+      <HtmlButton
+        variant="primary"
+        onClick={() => console.log("This is Html Button")}
+      >
+        Html Button
+      </HtmlButton>
     </div>
   );
 };
