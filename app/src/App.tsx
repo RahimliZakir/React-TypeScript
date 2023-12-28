@@ -22,6 +22,7 @@ import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateLiterals/Toast";
 import HtmlButton from "./components/html/HtmlButton";
+import CustomGreet from "./components/CustomGreet";
 
 const App = () => {
   const personName = {
@@ -117,6 +118,8 @@ const App = () => {
       >
         Html Button
       </HtmlButton>
+      {/* Extracting a Components Prop Types */}
+      <CustomGreet name="Zakir" isLoggedIn={false} />
     </div>
   );
 };
