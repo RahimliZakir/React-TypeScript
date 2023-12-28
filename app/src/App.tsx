@@ -20,6 +20,7 @@ import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
 import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
+import Toast from "./components/templateLiterals/Toast";
 
 const App = () => {
   const personName = {
@@ -106,6 +107,8 @@ const App = () => {
       {/* Restricting Props */}
       {/* Hansini gonderiremse o "true" kimi basha dushulecek. */}
       <RandomNumber value={13} isPositive />
+      {/* Template Literals and Exclude */}
+      <Toast position="center-bottom" />
     </div>
   );
 };
