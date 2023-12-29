@@ -23,6 +23,7 @@ import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateLiterals/Toast";
 import HtmlButton from "./components/html/HtmlButton";
 import CustomGreet from "./components/CustomGreet";
+import Text from "./components/polymorphic/Text";
 
 const App = () => {
   const personName = {
@@ -120,6 +121,16 @@ const App = () => {
       </HtmlButton>
       {/* Extracting a Components Prop Types */}
       <CustomGreet name="Zakir" isLoggedIn={false} />
+      {/* Polymorphic Components */}
+      <Text as="h1" title="Heading" size="lg">
+        Heading
+      </Text>
+      <Text as="p" size="md">
+        Paragraph
+      </Text>
+      <Text htmlFor="someId" as="label" size="sm" color="secondary">
+        Label
+      </Text>
     </div>
   );
 };
